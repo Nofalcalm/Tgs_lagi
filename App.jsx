@@ -2,6 +2,8 @@ import React, { useState, useEffect, Component } from 'react'
 import {View, Text, TouchableOpacity, StatusBar, Image} from 'react-native'
 import { FlatGrid } from 'react-native-super-grid';
 import { Switch } from 'react-native-switch';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -24,19 +26,18 @@ class App extends Component {
           <View style={{flex: 1, margin: 20}}>
           <Image
             style={{width: 50, height: 50}}
-            source={require('./src/images/nofal.jpg')}
+            source={require('./src/images/02.png')}
           />
 
           <Text style={{fontSize: 20, fontWeight: 'bold', marginTop: 10}}>Hello Everyone</Text>
           <Text style={{fontSize: 18}}>Apa Ada Yang Bisa Saya Bantu?</Text>
           <FlatGrid
-            style={{flex: 1}}
+            style={{flex: 1, marginTop: 30}}
             itemDimension={130}
-            spacing={20}
             data={this.state.device}
             renderItem={({ item, index }) => (
               <TouchableOpacity 
-                  style={{backgroundColor: '#ffffff', height: 150, borderRadius: 15, elevation: 3, padding: 20}}>
+                  style={{backgroundColor: '#ffffff', height: 150, borderRadius: 12, elevation: 3, padding: 20}}>
                 <Text style={{color: '#000000', fontWeight: 'bold', fontSize: 18}}>{item.place}</Text>
                 <Text style={{color: '#ababab', fontSize: 12}}>{item.desc}</Text>
                 <Text style={{color: '#013661', fontWeight: 'bold', marginVertical: 10}}>{item.deviceCount} devices</Text>
@@ -70,7 +71,24 @@ class App extends Component {
               </TouchableOpacity>
             )}
           />
-          </View>          
+          </View>
+            <View style={{backgroundColor: '#ffffff', flexDirection: 'row', paddingVertical: 10, borderTopRightRadius: 10, borderTopLeftRadius: 10}}>
+                  <TouchableOpacity style={{flex: 1, justifyContent:'center', alignItems: 'center'}}>
+                    <Icon name="home" size={20} color="#013661" />
+                  </TouchableOpacity>
+                  <TouchableOpacity style={{flex: 1, justifyContent:'center', alignItems: 'center'}}>
+                    <Icon name="clock" size={20} color="#013661" />
+                  </TouchableOpacity>
+                  <TouchableOpacity style={{flex: 1, justifyContent:'center', alignItems: 'center'}}>
+                    <Icon name="plus-circle" size={20} color="#013661" />
+                  </TouchableOpacity>
+                  <TouchableOpacity style={{flex: 1, justifyContent:'center', alignItems: 'center'}}>
+                    <Icon name="chart-bar" size={20} color="#013661" />
+                  </TouchableOpacity>
+                  <TouchableOpacity style={{flex: 1, justifyContent:'center', alignItems: 'center'}}>
+                    <Icon name="cog" size={20} color="#013661" />
+                  </TouchableOpacity>
+          </View>        
         </View>
       );
     }
