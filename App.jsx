@@ -9,12 +9,12 @@ class App extends Component {
     super(props);
     this.state = { 
       device: [
-        {place: 'Living Room', desc: '3 familiy member have access', deviceCount: 4, isOn: true},
-        {place: 'Living Room', desc: '3 familiy member have access', deviceCount: 4, isOn: true},
-        {place: 'Living Room', desc: '3 familiy member have access', deviceCount: 4, isOn: true},
-        {place: 'Living Room', desc: '3 familiy member have access', deviceCount: 4, isOn: true},
-        {place: 'Living Room', desc: '3 familiy member have access', deviceCount: 4, isOn: true},
-        {place: 'Living Room', desc: '3 familiy member have access', deviceCount: 4, isOn: true},
+        {place: 'HONDA', desc: 'familiy member honda', deviceCount: 4, isOn: true},
+        {place: 'YAMAHA', desc: 'familiy member yamaha', deviceCount: 4, isOn: true},
+        {place: 'SUZUKI', desc: 'familiy member suzuki', deviceCount: 4, isOn: true},
+        {place: 'KAWASAKI', desc: 'familiy member kawasaki', deviceCount: 4, isOn: true},
+        {place: 'HARLEY DAVIDSON', desc: 'familiy member harley davidson', deviceCount: 4, isOn: true},
+        {place: 'DUCATI', desc: 'familiy member ducati', deviceCount: 4, isOn: true},
       ]
      };
   }
